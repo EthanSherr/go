@@ -36,7 +36,7 @@ func test(msgToCustomer, msgToSpouse string) {
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
-	}
+	}*
 	fmt.Printf("Total cost: $%.4f\n", totalCost)
 }
 
