@@ -8,7 +8,6 @@ import (
 func main() {
 	inputs := []string{"11101010"}
 	for _, v := range inputs {
-		// test(v)
 		i, err := strconv.ParseUint(v, 2, 8)
 		if err != nil {
 			fmt.Println(err)
@@ -36,7 +35,7 @@ func flipBits(n uint8) uint8 {
 
 func flipBitsBetter(n uint8) uint8 {
 	odsMask, _ := strconv.ParseUint("10101010", 2, 8)
-	evsMask := odsMask >> 1
+	evsMask := odsMask >> 1 // 01010101
 
 	return ((n & uint8(odsMask)) >> 1) + ((n & uint8(evsMask)) >> 1)
 }
